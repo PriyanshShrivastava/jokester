@@ -230,4 +230,6 @@ getbackBtn.addEventListener("click", function () {
   jokeFormEl.reset();
   jokeFormEl.classList.toggle("hidden");
   jokeBoxEL.innerHTML = ``;
+  checkboxToggler(true);
+  customRadioElSelected = false;
 });
