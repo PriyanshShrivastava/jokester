@@ -107,6 +107,8 @@ function handleSubmit(e) {
     jokeBoxEL.innerHTML = `Bro! Amount should be less than 5!! 🙎`;
     jokeBoxHiddenRemove();
     jokeFormEl.reset();
+    checkboxToggler(true);
+    customRadioElSelected = false;
   } else {
     if (category === "Any") {
       jokes(category, amount);
