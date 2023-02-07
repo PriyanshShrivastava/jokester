@@ -36,10 +36,17 @@ const checkboxToggler = function (isDisabled) {
   punCheckEl.disabled = isDisabled;
 };
 
+const isCheckedFunc = function (isChecked) {
+  programCheckEl.checked = isChecked;
+  darkCheckEl.checked = isChecked;
+  punCheckEl.checked = isChecked;
+};
+
 customRadioEl.addEventListener("click", function () {
   if (customRadioElSelected) {
     customRadioEl.checked = false;
     checkboxToggler(true);
+    isCheckedFunc(false);
     customRadioElSelected = false;
   } else {
     if (customRadioEl.checked) {
