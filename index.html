@@ -29,10 +29,17 @@
       href="./favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="./favicon_io/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./output/output.css" />
   </head>
   <body
-    class="bg-brand min-h-screen flex justify-center items-center font-poppins"
+    class="bg-brand min-h-screen flex flex-col gap-4 md:gap-8 justify-center items-center font-poppins relative"
   >
     <div
       class="bg-mid rounded-lg flex flex-col gap-10 items-center px-6 py-10 w-9/12 max-w-2/3 shadow-md shadow-dark"
@@ -226,6 +233,35 @@
         Try again!
       </button>
     </div>
+    <footer class="relative w-9/12 max-w-2/3 text-sm md:text-md lg:text-xl">
+      <div
+        class="flex flex-col md:flex-row md:justify-evenly items-center gap-4"
+      >
+        <div>
+          <span class="text-slate-600"
+            >Made with 💝 by
+            <span class="font-semibold text-dark">Priyansh Shrivastava</span>
+          </span>
+        </div>
+        <div class="flex flex-row gap-2 md:gap-3">
+          <h3 class="text-md md:text-lg text-zinc-700">My Socials:</h3>
+          <a href="https://github.com/PriyanshShrivastava" target="_blank"
+            ><i class="fa-brands fa-github text-md md:text-lg"></i>
+          </a>
+          <a href="https://twitter.com/shadow_priyansh" target="_blank"
+            ><i class="fa-brands fa-twitter text-md md:text-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/priyansh-shrivastava-184355145/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin text-md md:text-lg"></i
+          ></a>
+          <a href="https://priyanshshrivastava.hashnode.dev/" target="_blank"
+            ><i class="fa-brands fa-hashnode text-md md:text-lg"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
     <script src="./main.js"></script>
   </body>
 </html>
