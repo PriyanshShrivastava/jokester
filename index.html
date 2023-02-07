@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokester - Your Daily Dose of Jokes.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
+    <link rel="stylesheet" href="./output/output.css" />
+  </head>
+  <body
+    class="bg-brand min-h-screen flex justify-center items-center font-poppins"
+  >
+    <div
+      class="bg-mid rounded-lg flex flex-col gap-10 items-center px-6 py-10 w-9/12 max-w-2/3 shadow-md shadow-dark"
+    >
+      <h2
+        class="text-lg md:text-3xl text-light md:text-center text-left"
+        id="form-heading"
+      >
+        Select your <span class="text-brand">Joke</span> Preference
+      </h2>
+
+      <!-- Form Element  -->
+
+      <form
+        action="#"
+        method="POST"
+        class="w-10/12 text-light flex flex-col gap-6 justify-center"
+        id="joke-form"
+      >
+        <!-- Category  -->
+        <div
+          class="flex flex-col md:flex-row gap-2 md:items-center md:justify-evenly items-start"
+        >
+          <!-- Category selection  -->
+          <label for="category" class="md:text-lg"
+            >Select
+            <span class="text-brand font-medium">category/categories:</span>
+          </label>
+          <div
+            class="w-full md:w-2/3 p-4 border-2 border-brand rounded-md inline-block md:p-8 gap-4"
+          >
+            <div class="flex flex-col gap-3">
+              <div>
+                <input
+                  type="radio"
+                  name="category"
+                  value="Any"
+                  id="any-category"
+                  class="focus:ring-dark focus:ring-1 focus:outline-none"
+                />
+                <label for="any-category">
+                  &nbsp; Any
+                  <span class="text-slate-300">(Default)</span></label
+                >
+              </div>
+
+              <div class="flex flex-col md:flex-row gap-2" id="custCategoryBox">
+                <div class="w-full md:w-1/3">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="Custom"
+                    id="custom-category"
+                    class="focus:ring-dark focus:ring-1 focus:outline-none peer"
+                  />
+                  <label for="custom-category"> &nbsp; Custom : </label>
+                </div>
+
+                <div
+                  class="flex flex-wrap items-center gap-3 md:gap-4 lg:justify-around w-full md:w-2/3"
+                >
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="programming"
+                      name="CustomPro"
+                      value="Programming"
+                      class="accent-brand focus:ring-dark focus:ring-1 focus:outline-none"
+                      disabled
+                    />
+                    <label for="programming">Programming</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="CustomDark"
+                      id="dark"
+                      value="Dark"
+                      class="accent-brand focus:ring-dark focus:ring-1 focus:outline-none"
+                      disabled
+                    />
+                    <label for="dark">Dark</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="CustomPun"
+                      id="pun"
+                      value="Pun"
+                      class="accent-brand focus:ring-dark focus:ring-1 focus:outline-none"
+                      disabled
+                    />
+                    <label for="pun">Pun</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Flags Category  -->
+        <div
+          class="flex flex-col md:flex-row gap-2 items-start md:items-center md:justify-evenly"
+        >
+          <label for="category" class="md:text-lg"
+            >Select <span class="text-rose-500 font-medium">flags</span> to
+            blacklist:
+          </label>
+          <div
+            class="w-full md:w-2/3 p-4 border-2 border-brand rounded-md inline-block md:p-8 gap-4 md:ml-10"
+          >
+            <div
+              class="flex flex-row flex-wrap gap-2 md:gap-6 md:justify-evenly"
+            >
+              <span class="text-zinc-200"> (optional) </span>
+              <div class="flex items-center gap-1">
+                <input
+                  type="checkbox"
+                  name="blacklistNsfw"
+                  id="nsfw"
+                  value="nsfw"
+                  class="accent-brand focus:ring-dark focus:ring-1 focus:outline-none"
+                />
+                <label for="nsfw">nsfw</label>
+              </div>
+              <div class="flex items-center gap-1">
+                <input
+                  type="checkbox"
+                  name="blacklistReligious"
+                  id="religious"
+                  value="religious"
+                  class="accent-brand focus:ring-dark focus:ring-1 focus:outline-none"
+                />
+                <label for="nsfw" class="text-md">religious</label>
+              </div>
+              <div class="flex items-center gap-1">
+                <input
+                  type="checkbox"
+                  name="blacklistRacist"
+                  id="racist"
+                  value="racist"
+                  class="accent-brand focus:ring-dark focus:ring-1 focus:outline-none"
+                />
+                <label for="nsfw">racist</label>
+              </div>
+              <div class="flex items-center gap-1">
+                <input
+                  type="checkbox"
+                  name="blacklistSexist"
+                  id="sexist"
+                  value="sexist"
+                  class="accent-brand focus:ring-dark focus:ring-1 focus:outline-none"
+                />
+                <label for="nsfw">sexist</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Amount Inputs  -->
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center md:justify-evenly"
+        >
+          <label for="category" class="w-56 md:text-lg"
+            >Tell us <span>amount</span> of jokes:
+          </label>
+          <div class="w-full md:w-2/3 md:ml-8">
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="ex: 2( should be < 5)"
+              class="placeholder:text-zinc-400 placeholder:text-sm text-white w-full rounded-lg bg-transparent h-full border-2 border-brand px-6 py-4 text-md focus:outline-none appearance-none"
+            />
+          </div>
+        </div>
+        <button
+          class="px-6 py-3 bg-brand text-dark md:text-xl text-md w-40 md:w-60 mx-auto rounded-lg font-semibold shadow-md shadow-dark"
+          id="form-btn"
+        >
+          Get me jokes!
+        </button>
+      </form>
+      <div
+        class="hidden w-10/12 text-light text-md text-left"
+        id="joke-box"
+      ></div>
+      <button
+        id="get-back"
+        class="hidden px-5 py-2 bg-brand text-dark md:text-lg text-sm w-32 md:w-52 mx-auto rounded-lg font-semibold shadow-md shadow-dark"
+      >
+        Try again!
+      </button>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
